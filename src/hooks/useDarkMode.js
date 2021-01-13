@@ -4,10 +4,9 @@ const useDarkMode = (initialValues)=> {
     const [values, setValues] = useLocalStorage("dark", initialValues);
   
     const handleChanges = e => {
-      setValues({
-        ...values,
-        // [e.target.name]: e.target.value
-      });
+      setValues(
+        !values
+      );
     };
   
     return([values, handleChanges]);
